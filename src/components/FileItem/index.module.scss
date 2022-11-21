@@ -1,0 +1,28 @@
+@use './../../scss/' as *;
+
+.item {
+  list-style: none;
+  background-color: rgb(192, 192, 192, .26);
+	box-shadow: $box-shadow;
+  border-radius: 5px;
+  @include flex(row, center, center);
+  gap: 5px;
+  padding: .8em 1em;
+
+  svg {
+		cursor: pointer;
+    color: $error;
+		width: 15px;
+		height: 15px;
+		transition: ease-in-out all .2;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  p {
+    flex: 1;
+    font-size: 0.9rem;
+  }
+}

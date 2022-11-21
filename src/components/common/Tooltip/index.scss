@@ -1,0 +1,59 @@
+@use '../../../scss/' as *;
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip_text {
+  position: absolute;
+  background: #767676;
+  color: $white;
+  border-radius: 4px;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1;
+  padding: 5px;
+  top: 33px;
+  left: 50%;
+  transform: translate(-50%);
+  max-width: 240px;
+  width: max-content;
+  text-align: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 45%;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 7px solid #767676;
+  }
+}
+
+.tooltip:hover .tooltip_text {
+  visibility: visible;
+  opacity: 1;
+  animation: tool;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  // animation-iteration-count: infinite;
+}
+
+@keyframes tool {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+    transform: translate(-50%);
+  }
+	80% {
+    transform: scale(0);
+    opacity: 0;
+    transform: translate(-50%);
+  }
+  100% {
+    transform: scale(1);
+    transform: translate(-50%);
+    opacity: 1;
+  }
+}

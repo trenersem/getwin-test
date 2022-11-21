@@ -1,0 +1,31 @@
+@use './../../scss/' as *;
+#container {
+  width: 1000px;
+  margin: 20px auto;
+}
+.ck.ck-editor {
+  width: 100%;
+  min-height: 250px;
+  border-radius: 4px;
+  color: white;
+  position: unset;
+}
+.ck.ck-editor__main > .ck-editor__editable {
+  background-color: transparent;
+  border: 1px solid #d0cfcf;
+  border-radius: 4px !important;
+	padding: 10px 20px;
+  min-height: 300px;
+}
+
+.ck.ck-toolbar.ck-toolbar_grouping {
+  background-color: $white;
+  border: none;
+}
+
+.ck.ck-editor__top.ck-reset_all {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+}

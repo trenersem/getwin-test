@@ -1,0 +1,6 @@
+@use './../../scss/' as *;
+
+.login {
+	@include flex(column, center, center);
+	gap: 10px;
+}

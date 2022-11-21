@@ -1,0 +1,7 @@
+@use '../../scss/' as *;
+
+.container {
+  @include flex(column, center, center);
+  width: 100%;
+  padding: 20px;
+}
